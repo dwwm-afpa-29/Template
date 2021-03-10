@@ -16,7 +16,7 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 300px 1fr auto;
+    grid-template-rows: 200px 80px 1fr auto;
 
     width: 100%;
     min-height: 100vh;
@@ -25,6 +25,8 @@ body {
                                         /* ----- HEADER ----- */
 
 header {
+    position: relative;
+
     grid-column: 1 / 13;
     grid-row: 1 / 2;
 }
@@ -35,9 +37,9 @@ header {
     position: relative;
 
     width: 100%;
-    height: 200px;
+    height: 100%;
 
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%), url(../images/vigne.png);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%), url(../images/vigne2.png);
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -76,8 +78,8 @@ header {
     width: auto;
     height: 40px;
 
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background: transparent;
     padding: 10px;
     margin-right: 10px;
     text-decoration: none;
@@ -94,8 +96,8 @@ header {
     width: auto;
     height: 40px;
 
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background: transparent;
     padding: 10px;
     text-decoration: none;
     
@@ -107,19 +109,89 @@ header {
     font-size: 2rem;
 }
 
+                                        /* ----- BOUTONS ----- */
+
+.fill-button {
+  position: relative;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:156px;
+  height:45px;
+  border:1px solid #fff;
+  text-align:center;
+  box-sizing:border-box;
+  color:#fff;
+  text-decoration:none;
+  cursor: pointer;
+  line-height:28px;
+  font-family: 'arial';
+  border-radius: 4px;
+  margin: 10px;
+}
+.fill-button > span {
+  display:block;
+}
+.fill-button > .fill-button-hover:after, .fill-button > .fill-button-hover:before {
+  position:absolute;
+  top:0;
+  opacity:0;
+  display:block;
+  content:"";
+  width:0;
+  height:45px;
+}
+.fill-button > .fill-button-hover:after {
+  background-color:#35495e;
+  transform:skewX(45deg);
+  transform-origin:center center;
+  transition:all .55s, opacity .4s;
+  left:50%;
+}
+.fill-button .fill-button-hover:before {
+  background-color:#42b883;
+  transition:opacity 1s;
+}
+
+.fill-button .fill-button-text {
+  z-index:1;
+  position:relative;
+  color:#fff;
+  transition:color .35s;
+}
+.fill-button:hover .fill-button-text {
+  color:#42b883;
+}
+.fill-button .fill-button-hover:hover:after {
+  opacity:1;
+  left:2%;
+  width:95%;
+  transform:skewX(45deg);
+}
+.fill-button > .fill-button-hover:hover:before {
+  opacity: 1;
+  left: 0;
+  width:100%;
+}
+
                                         /* ----- NAV ----- */
 
 nav {
-    position: relative;
+    position: sticky;
+    top: 0;
+
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
 
     width: 100%;
-    height: 100px;
+    height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: #eee;
+    background-color: var(--raisin);
 }
 
                                         /* ----- LISTE DES PRODUITS ----- */
@@ -138,8 +210,12 @@ nav {
 
 .produits>a {
     text-decoration: none;
-    color: #000;
+    color: var(--green);
     font-size: 1.3rem;
+}
+
+.produits>a:hover {
+    font-weight: bold;
 }
 
                                         /* ----- MENU PRODUIT ----- */
@@ -162,6 +238,8 @@ nav {
     padding: 20px 40px;
     z-index:25;
     box-shadow: 4px 4px 4px #000;
+
+    border-radius: 5px;
 }
 
                                         /* ----- PRODUIT TITRE ----- */
@@ -261,6 +339,9 @@ nav {
 }
 
 .recherche>button {
+    background-color: var(--raisin);
+    color: var(--green);
+
     box-shadow: 4px 4px 4px #ccc;
     padding: 5px;
 
@@ -274,7 +355,7 @@ nav {
 
 main {
     grid-column: 1 / 13;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
 
     display: flex;
     justify-content: center;
@@ -293,13 +374,13 @@ main {
 
 footer {
     grid-column: 1 / 13;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    background-color: #eee;
+    background-color: var(--raisin);
     padding: 10px;
 }
 
@@ -315,7 +396,7 @@ footer {
 
 .footer1>a {
     text-decoration: none;
-    color: #000;
+    color: var(--green);
     margin: 10px;
 }
 
@@ -331,6 +412,8 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    color: var(--green);
 }
 
 .footer3 {
@@ -346,4 +429,5 @@ footer {
 .footer3>i {
     font-size: 1.8em;
     margin: 10px;
+    color: var(--green);
 }
