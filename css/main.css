@@ -255,10 +255,13 @@ nav {
     outline: none;
     padding: 5px;
 
+    box-shadow: 4px 4px 4px #ccc;
+
     border: 1px solid #ccc;
 }
 
 .recherche>button {
+    box-shadow: 4px 4px 4px #ccc;
     padding: 5px;
 
     border-top: 1px solid #ccc;
