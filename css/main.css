@@ -29,7 +29,7 @@ header {
     grid-row: 1 / 2;
 }
 
-                    /* ----- BANNIERE ----- */
+                                        /* ----- BANNIERE ----- */
 
 .banniere {
     position: relative;
@@ -107,7 +107,7 @@ header {
     font-size: 2rem;
 }
 
-                    /* ----- NAV ----- */
+                                        /* ----- NAV ----- */
 
 nav {
     position: relative;
@@ -122,7 +122,7 @@ nav {
     background-color: #eee;
 }
 
-/* ----- LISTE DES PRODUITS ----- */
+                                        /* ----- LISTE DES PRODUITS ----- */
 
 .produits {
     position: relative;
@@ -142,7 +142,7 @@ nav {
     font-size: 1.3rem;
 }
 
-/* ----- MENU PRODUIT ----- */
+                                        /* ----- MENU PRODUIT ----- */
 
 .produit {
     position: absolute;
@@ -164,14 +164,14 @@ nav {
     box-shadow: 4px 4px 4px #000;
 }
 
-/* ----- PRODUIT TITRE ----- */
+                                        /* ----- PRODUIT TITRE ----- */
 
 .produit>h3 {
     margin-bottom: 10px;
     color: #fff;
 }
 
-/* ----- PRODUIT LISTE ----- */
+                                        /* ----- PRODUIT LISTE ----- */
 
 .produit>ul {
     margin-bottom: 20px;
@@ -204,7 +204,7 @@ nav {
     display: flex;
 }
 
-/* ----- COULEURS MENU PRODUIT ----- */
+                                        /* ----- COULEURS MENU PRODUIT ----- */
 
 .produit-vin {
     background-color: #DE5123;
@@ -234,7 +234,7 @@ nav {
     background-color: #DE5123;
 }
 
-/* ----- RECHERCHE ----- */
+                                        /* ----- RECHERCHE ----- */
 
 .recherche {
     position: absolute;
@@ -270,7 +270,7 @@ nav {
     border-left: none;
 }
 
-/* ----- MAIN ----- */
+                                        /* ----- MAIN ----- */
 
 main {
     grid-column: 1 / 13;
@@ -289,7 +289,7 @@ main {
     border: 1px solid #ccc;
 }
 
-/* ----- FOOTER ----- */
+                                        /* ----- FOOTER ----- */
 
 footer {
     grid-column: 1 / 13;
