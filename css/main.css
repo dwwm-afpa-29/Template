@@ -1,0 +1,346 @@
+                                        /* ----- IMPORTS ----- */
+
+@import url('variables.css');
+
+
+                                        /* ----- GENERAL ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--quicksand);
+}
+
+/* GRID 12 colonnes, 3 lignes */
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 300px 1fr auto;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+                                        /* ----- HEADER ----- */
+
+header {
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+}
+
+                    /* ----- BANNIERE ----- */
+
+.banniere {
+    position: relative;
+
+    width: 100%;
+    height: 200px;
+
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%), url(../images/vigne.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.banniere>h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+
+    font-family: var(--york);
+    color: #fff;
+}
+
+.boutons_banniere {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: auto;
+    height: 50px;
+
+    /* border: 1px solid #fff; */
+}
+
+.bouton-connexion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 40px;
+
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.panier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: 40px;
+
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.panier>i {
+    font-size: 2rem;
+}
+
+                    /* ----- NAV ----- */
+
+nav {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #eee;
+}
+
+/* ----- LISTE DES PRODUITS ----- */
+
+.produits {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 20px;
+}
+
+.produits>a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+/* ----- MENU PRODUIT ----- */
+
+.produit {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-35%);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 250px;
+
+    transition-duration: 3s;
+    background-color: #fff;
+    padding: 20px 40px;
+    z-index:25;
+    box-shadow: 4px 4px 4px #000;
+}
+
+/* ----- PRODUIT TITRE ----- */
+
+.produit>h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* ----- PRODUIT LISTE ----- */
+
+.produit>ul {
+    margin-bottom: 20px;
+}
+
+.produit>ul>li {
+    list-style-type: none;
+}
+
+.produit>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.produit>ul>li>a:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.produit>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.produit>a:hover {
+    font-weight: bold;
+}
+
+.produits:hover .produit {
+    display: flex;
+}
+
+/* ----- COULEURS MENU PRODUIT ----- */
+
+.produit-vin {
+    background-color: #DE5123;
+}
+
+.produit-champagne {
+    background-color: #DE5123;
+}
+
+.produit-biere {
+    background-color: #DE5123;
+}
+
+.produit-spiritueux {
+    background-color: #DE5123;
+}
+
+.produit-sans-alcool {
+    background-color: #DE5123;
+}
+
+.produit-epicerie {
+    background-color: #DE5123;
+}
+
+.produit-accessoires {
+    background-color: #DE5123;
+}
+
+/* ----- RECHERCHE ----- */
+
+.recherche {
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 40px;
+
+    /* border: 1px solid #ccc; */
+}
+
+.recherche>input {
+    outline: none;
+    padding: 5px;
+
+    border: 1px solid #ccc;
+}
+
+.recherche>button {
+    padding: 5px;
+
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+}
+
+/* ----- MAIN ----- */
+
+main {
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.essai {
+    width: 75%;
+    height: 800px;
+    border: 1px solid #ccc;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #eee;
+    padding: 10px;
+}
+
+.footer1 {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer1>a {
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+}
+
+.footer1>a:hover {
+    font-weight: bold;
+}
+
+.footer2 {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer3 {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer3>i {
+    font-size: 1.8em;
+    margin: 10px;
+}
