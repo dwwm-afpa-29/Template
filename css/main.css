@@ -1,6 +1,7 @@
                                         /* ----- IMPORTS ----- */
 
 @import url('variables.css');
+@import url('responsive.css');
 
 
                                         /* ----- GENERAL ----- */
@@ -29,6 +30,10 @@ header {
 
     grid-column: 1 / 13;
     grid-row: 1 / 2;
+}
+
+.img-mobile {
+    display: none;
 }
 
                                         /* ----- BANNIERE ----- */
@@ -63,7 +68,7 @@ header {
     left: 150px;
 }
 
-.boutons_banniere {
+.boutons-banniere {
     position: absolute;
     bottom: 10px;
     right: 20px;
@@ -140,6 +145,7 @@ header {
 }
 .fill-button > span {
   display:block;
+  width: 100%;
 }
 .fill-button > .fill-button-hover:after, .fill-button > .fill-button-hover:before {
   position:absolute;
@@ -181,6 +187,16 @@ header {
   opacity: 1;
   left: 0;
   width:100%;
+}
+
+.bouton-mobile {
+    display: none;
+}
+
+
+
+.nav-mobile {
+    display: none;
 }
 
                                         /* ----- NAV ----- */
@@ -288,36 +304,37 @@ nav {
 
 .produits:hover .produit {
     display: flex;
+    transition-duration: 3s;
 }
 
                                         /* ----- COULEURS MENU PRODUIT ----- */
 
 .produit-vin {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-champagne {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-biere {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-spiritueux {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-sans-alcool {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-epicerie {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
 .produit-accessoires {
-    background-color: #DE5123;
+    background-color: var(--green);
 }
 
                                         /* ----- RECHERCHE ----- */
@@ -347,8 +364,8 @@ nav {
 }
 
 .recherche>button {
-    background-color: var(--raisin);
-    color: var(--green);
+    background-color: var(--green);
+    color: #fff;
 
     box-shadow: 4px 4px 4px #ccc;
     padding: 5px;
