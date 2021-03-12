@@ -242,6 +242,12 @@ nav {
     font-weight: bold;
 }
 
+@-moz-document url-prefix() {
+  .produits>a:hover {
+    font-weight: normal;
+  }
+}
+
                                         /* ----- MENU PRODUIT ----- */
 
 .produit {
